@@ -5,13 +5,13 @@ from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 
 BOT_TOKEN = os.environ["BOT_TOKEN"]
-GAME_URL = "https://lucky-777-jungho-k1ms-projects.vercel.app/"  # Vercel 배포 링크
+GAME_URL = "https://my-stack-game.vercel.app/"  # Vercel 배포 링크
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    keyboard = [[InlineKeyboardButton("🎮 행운의 7.77초 잡기", url=GAME_URL)]]
+    keyboard = [[InlineKeyboardButton("🎮 Play Stack Game", url=GAME_URL)]]
     reply_markup = InlineKeyboardMarkup(keyboard)
     await update.message.reply_text(
-        "행운의 7.77초 게임에 도전하세요!",
+        "Let's play the Stack Game!",
         reply_markup=reply_markup
     )
 
